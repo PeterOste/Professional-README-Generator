@@ -9,6 +9,7 @@ With the README Generator, you can save time and ensure that your project docume
 - [Installation](#installation)
 - [Usage](#usage)
 - [Tests](#tests)
+- [Demo](#Demo)
 - [License](#license)
 
 ## Installation
