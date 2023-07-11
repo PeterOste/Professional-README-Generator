@@ -7,27 +7,47 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'Please enter a title for your project:',
+        message: 'Enter your project title:',
     },
     {
         type: 'input',
         name: 'description',
-        message: 'Please enter a description for your project:',
+        message: 'Enter a description for your project:',
     },
     {
       type: 'input',
       name: 'installation',
-      message: 'Please enter the installation instructions for your project:',
+      message: 'Enter the installation instructions for your project:',
     },
     {
       type: 'input',
       name: 'usage',
-      message: 'Please enter usage instructions for your project:',
+      message: 'Enter usage instructions for your project:',
+    },
+    {
+        type: 'input',
+        name: 'contributing',
+        message: 'Enter your contribution guidelines:',
+    },
+    {
+        type: 'input',
+        name: 'test',
+        message: 'Enter testing instructions:',
     },
     {
       type: 'input',
       name: 'license',
-      message: 'Please enter the license for your project:',
+      message: 'Enter the license for your project:',
+    },
+    {
+        type: 'input',
+        name: 'githubUsername',
+        message: 'Enter your GitHub username:',
+    },
+    {
+        type: 'input',
+        name: 'emailAddress',
+        message: 'Enter your email address:',
     },
 ];
 
