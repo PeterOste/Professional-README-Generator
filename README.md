@@ -19,12 +19,12 @@ With the README Generator, you can save time and ensure that your project docume
 ## Usage
 1. Open a terminal or command prompt.
 2. Navigate to the project directory.
-3. Run the command "node index.js".
+3. Run the command `node index.js`.
 4. Answer the prompts by providing the required information about your project.
 5. Once you have answered all the prompts, the README file will be generated in the project directory.
 
 ## Tests
-To run the tests for the README Generator, use the following command: "npm test"
+To run the tests for the README Generator, use the following command: `npm test`
 
 ## License
 This project is licensed under the MIT license.
