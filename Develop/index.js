@@ -86,6 +86,10 @@ const questions = [
     },
 ];
 
+inquirer.prompt(questions).then((answers) => {
+    generateReadme(answers.title, answers.description, answers.installation, answers.usage, answers.contributing, answers.test, answers.license, answers.githubUsername, answers.emailAddress);
+});
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
