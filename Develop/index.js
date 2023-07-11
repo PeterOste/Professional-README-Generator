@@ -2,6 +2,41 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
+const generateReadme = ({title, description, installation, usage, contributing, test, license, githubUsername, emailAddress}) =>
+`
+-----
+title: ${title}
+-----
+${description}
+
+Table of Contents
+-----
+*[Installation] (#installation)
+*[Usage] (#usage)
+*[Contributing] (#contributing)
+*[Test] (#test)
+*[License] (#license)
+*[Questions] (#questions)
+
+**Installation**
+${installation}
+
+**Usage**
+${usage}
+
+**Contributing**
+${contributing}
+
+**Test**
+${test}
+
+**License**
+${license}
+
+**Questions**
+If you have any questions about this project, you can contact me at ${githubUsername} or ${emailAddress}
+`;
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
