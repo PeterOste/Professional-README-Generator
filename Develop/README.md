@@ -1,8 +1,8 @@
 
-  # boop
+  # Qwerty
 
   ## Description
-  asd
+  Stuff
 
   ## Table of Contents
   - [Installation](#installation)
@@ -13,23 +13,23 @@
   - [Questions](#questions)
 
   ## Installation
-  asd
+  1,2,3
 
   ## Usage
-  asd
+  Do
 
   ## Contributing
-  asd
+  Yes
 
   ## Tests
-  asd
+  1
 
   ## License
-  [![License](https://img.shields.io/badge/License-asd-brightgreen.svg)](https://opensource.org/licenses/asd)
-  This application is covered under the asd license
+  [![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+  This application is covered under the MIT license
 
   ## Questions
   If you have any questions about this project, you can reach out to me via GitHub or email:
-  - GitHub: [asd](https://github.com/asd)
-  - Email: asd
+  - GitHub: [PeterOste](https://github.com/PeterOste)
+  - Email: peter.ostertag99@gmail.com
   
