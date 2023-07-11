@@ -6,10 +6,10 @@ The README Generator is a command-line application that creates high-quality, pr
 With the README Generator, you can save time and ensure that your project documentation follows a standardized format. It provides an easy and efficient way to create consistent README files that convey important information about your projects.
 
 ## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Tests](#tests)
-- [License](#license)
+→ [Installation](#installation)
+→ [Usage](#usage)
+→ [Tests](#tests)
+→ [License](#license)
 
 ## Installation
 1. Clone the repository to your local machine.
