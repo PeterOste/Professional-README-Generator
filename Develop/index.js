@@ -14,47 +14,6 @@ function writeToFile(fileName, data) {
     });
 }
 
-const generateReadme = ({ title, description, installation, usage, contributing, test, license, githubUsername, emailAddress }) => {
-
-    const readmeContent =`
-    # ${title}
-
-    ## Description
-    ${description}
-
-    ## Table of Contents
-    -----
-    → [Installation](#installation)
-    → [Usage](#usage)
-    → [Contributing](#contributing)
-    → [Test](#test)
-    → [License](#license)
-    → [Questions](#questions)
-
-    ## Installation
-    ${installation}
-
-    ## Usage
-    ${usage}
-
-    ## Contributing
-    ${contributing}
-
-    ## Test
-    ${test}
-
-    ## License
-    ${license}
-
-    ## Questions
-    If you have any questions about this project, you can contact me via GitHub or email: 
-    → GitHub: https://github.com/${githubUsername}
-    → Email: ${emailAddress}
-    `;
-    
-    return readmeContent;
-};
-
 function init() {
 // TODO: Create an array of questions for user input
 const questions = [
@@ -106,7 +65,7 @@ const questions = [
 ];
 
     inquirer.prompt(questions).then((answers) => {
-        const readmeContent = generateReadme(answers);
+        const readmeContent = generateMarkdown(answers);
         writeToFile('README.md', readmeContent);
     });
 }
