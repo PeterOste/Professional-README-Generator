@@ -2,40 +2,46 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-const generateReadme = ({title, description, installation, usage, contributing, test, license, githubUsername, emailAddress}) =>
-`
------
-title: ${title}
------
-${description}
+const generateReadme = ({ title, description, installation, usage, contributing, test, license, githubUsername, emailAddress }) => {
 
-Table of Contents
------
-*[Installation] (#installation)
-*[Usage] (#usage)
-*[Contributing] (#contributing)
-*[Test] (#test)
-*[License] (#license)
-*[Questions] (#questions)
+    const readmeContent =`
+    # ${title}
 
-**Installation**
-${installation}
+    ## Description
+    ${description}
 
-**Usage**
-${usage}
+    ## Table of Contents
+    -----
+    → [Installation](#installation)
+    → [Usage](#usage)
+    → [Contributing](#contributing)
+    → [Test](#test)
+    → [License](#license)
+    → [Questions](#questions)
 
-**Contributing**
-${contributing}
+    ## Installation
+    ${installation}
 
-**Test**
-${test}
+    ## Usage
+    ${usage}
 
-**License**
-${license}
+    ## Contributing
+    ${contributing}
 
-**Questions**
-If you have any questions about this project, you can contact me at ${githubUsername} or ${emailAddress}
-`;
+    ## Test
+    ${test}
+
+    ## License
+    ${license}
+
+    ## Questions
+    If you have any questions about this project, you can contact me via GitHub or email: 
+    → GitHub: https://github.com/${githubUsername}
+    → Email: ${emailAddress}
+    `;
+
+    return readmeContent;
+};
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -86,10 +92,6 @@ const questions = [
     },
 ];
 
-inquirer.prompt(questions).then((answers) => {
-    generateReadme(answers.title, answers.description, answers.installation, answers.usage, answers.contributing, answers.test, answers.license, answers.githubUsername, answers.emailAddress);
-});
-
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
@@ -101,10 +103,11 @@ function writeToFile(fileName, data) {
     });
 }
 
-// TODO: Create a function to initialize app
 function init() {
-
+    inquirer.prompt(questions).then((answers) => {
+        const readmeContent = generateReadme(answers);
+        writeToFile('README.md', readmeContent);
+    });
 }
 
-// Function call to initialize app
 init();
